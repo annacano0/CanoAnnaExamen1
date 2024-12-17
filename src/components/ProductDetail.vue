@@ -25,6 +25,7 @@ const product = computed(() => {
 
 <template>
   <h2>Producte: {{ product?.name }}</h2>
+  <p>ID: {{ product?.id }}</p>
   <p>Descripcio: {{ product?.description }}</p>
 </template>
 
