@@ -1,8 +1,8 @@
 <script setup>
 const products = [
-  { id: 1, nom: 'Pebrot', descripcio: 'pebrot del penedes de proximitat' },
-  { id: 2, nom: 'Tomaquet', descripcio: 'Tomaquet del penedes de proximitat' },
-  { id: 3, nom: 'All', descripcio: 'All del penedes de proximitat' },
+  { id: 1, name: 'Pebrot', description: 'pebrot del penedes de proximitat' },
+  { id: 2, name: 'Tomaquet', description: 'Tomaquet del penedes de proximitat' },
+  { id: 3, name: 'All', description: 'All del penedes de proximitat' },
 ]
 </script>
 
@@ -11,9 +11,11 @@ const products = [
     <h1>Exercici 1</h1>
     <ul>
       <li v-for="product in products" :key="product.id">
-        <router-link :to="{ name: 'product.detail', params: { productId: product.id } }">{{
-          product.name
-        }}</router-link>
+        <router-link
+          :products="products"
+          :to="{ name: 'product.detail', params: { productId: product.id } }"
+          >{{ product.name }}
+        </router-link>
       </li>
     </ul>
     <RouterView></RouterView>

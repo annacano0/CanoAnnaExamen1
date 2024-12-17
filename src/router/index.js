@@ -13,6 +13,17 @@ const router = createRouter({
       path: '/exercici1',
       name: 'exercici1',
       component: () => import('../views/Exercici1View.vue'),
+      children: [
+        {
+          path: ':productId',
+          name: 'product.detail',
+          component: () => import('@/components/ProductDetail.vue'),
+          props: (route) => ({
+            ...route.params,
+            id: parseInt(route.params.id),
+          }),
+        },
+      ],
     },
     {
       path: '/exercici2',
