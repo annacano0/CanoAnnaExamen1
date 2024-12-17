@@ -2,6 +2,6 @@
 
 <template>
   <main>
-    <h1>Home</h1>
+    <h1>Exercici 3</h1>
   </main>
 </template>
