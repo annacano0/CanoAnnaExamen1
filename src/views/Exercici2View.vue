@@ -18,7 +18,7 @@ const decrement = (newValue) => {
 <template>
   <main>
     <h1>Comptador</h1>
-    <p>{{ counter }}</p>
+    <p>Valor comptador: {{ counter }}</p>
     <BotoSumar @increment="increment"></BotoSumar>
     <BotoRestar @decrement="decrement"></BotoRestar>
   </main>
