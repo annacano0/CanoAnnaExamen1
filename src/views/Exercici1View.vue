@@ -1,4 +1,6 @@
 <script setup>
+import ProductDetail from '@/components/ProductDetail.vue'
+
 const products = [
   { id: 1, name: 'Pebrot', description: 'pebrot del penedes de proximitat' },
   { id: 2, name: 'Tomaquet', description: 'Tomaquet del penedes de proximitat' },
@@ -18,6 +20,6 @@ const products = [
         </router-link>
       </li>
     </ul>
-    <RouterView></RouterView>
+    <RouterView> <ProductDetail :products="products" /> </RouterView>
   </main>
 </template>

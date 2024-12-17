@@ -17,15 +17,19 @@ const productId = computed(() => {
 })
 
 const product = computed(() => {
-  console.log(props.products, productId.value)
-  return props.products?.find((product) => {
-    product.id === parseInt(productId.value)
+  return props.products.find((product) => {
+    return product.id == productId.value
   })
 })
 </script>
 
 <template>
   <h2>Producte: {{ product?.name }}</h2>
-  <p>id: {{ productId }}</p>
   <p>Descripcio: {{ product?.description }}</p>
 </template>
+
+<style scoped>
+h2 {
+  margin: 1em 0em 0em;
+}
+</style>
